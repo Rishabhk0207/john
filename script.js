@@ -8,8 +8,11 @@ let arr = [
 
 function PrintDeveloperbyMap() {
 
-  let developer = arr.filter((key) =>  key.profession==="developer");
-  developer.map(key => console.log(key));
+   arr.map(key=>{
+    if(key.profession ==='developer'){
+      console.log(`Id: ${key.id}, Name: ${key.name}, Age: ${key.age}, Profession: ${key.profession}`);
+    }
+  });
 }
 
 function PrintDeveloperbyForEach() {

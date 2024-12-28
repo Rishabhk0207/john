@@ -33,7 +33,7 @@ function addData() {
 }
 
 function removeAdmin() {
- arr.filter(key => key.profession !== 'admin');
+ arr=arr.filter(key => key.profession !== 'admin');
   arr.map(key =>  console.log(`Id: ${key.id}, Name: ${key.name}, Age: ${key.age}, Profession: ${key.profession}`));
 
 
@@ -46,7 +46,7 @@ function concatenateArray() {
     { id: 6, name: "Shayam", age: "25", profession: "manager" },
     { id: 7, name: "Mohan", age: "30", profession: "developer" }
   ];
-  const concatArray = arr.concat(newArray);
-  concatArray.map(key =>  console.log(`Id: ${key.id}, Name: ${key.name}, Age: ${key.age}, Profession: ${key.profession}`));
+  arr = arr.concat(newArray);
+  arr.map(key =>  console.log(`Id: ${key.id}, Name: ${key.name}, Age: ${key.age}, Profession: ${key.profession}`));
 
 }

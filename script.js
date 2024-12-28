@@ -17,21 +17,25 @@ function PrintDeveloperbyMap() {
 
 function PrintDeveloperbyForEach() {
 
-  let developer = arr.filter((key) =>  key.profession==="developer");
-  developer.forEach(key => console.log(key));
+  arr.forEach(key => {
+    if(key.profession ==='developer'){
+      console.log(`Id: ${key.id}, Name: ${key.name}, Age: ${key.age}, Profession: ${key.profession}`);
+    }
+  });
+  }
   
-}
 
 function addData() {
 
   let employee = {id:4, name:"susan", age:"20", profession:"intern"};
   arr.push(employee);
-  console.log(employee);
+  arr.map(key =>  console.log(`Id: ${key.id}, Name: ${key.name}, Age: ${key.age}, Profession: ${key.profession}`));
 }
 
 function removeAdmin() {
-  let developer = arr.filter(key => key.profession != "admin");
-  console.log(developer);
+ arr.filter(key => key.profession !== 'admin');
+  arr.map(key =>  console.log(`Id: ${key.id}, Name: ${key.name}, Age: ${key.age}, Profession: ${key.profession}`));
+
 
 }
 
@@ -43,5 +47,6 @@ function concatenateArray() {
     { id: 7, name: "Mohan", age: "30", profession: "developer" }
   ];
   const concatArray = arr.concat(newArray);
-  console.log(concatArray);
+  concatArray.map(key =>  console.log(`Id: ${key.id}, Name: ${key.name}, Age: ${key.age}, Profession: ${key.profession}`));
+
 }

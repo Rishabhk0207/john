@@ -33,7 +33,7 @@ function addData() {
 }
 
 function removeAdmin() {
- arr=arr.filter(key => key.profession !== 'admin');
+ arr = arr.filter(key => key.profession !== 'admin');
   arr.map(key =>  console.log(`Id: ${key.id}, Name: ${key.name}, Age: ${key.age}, Profession: ${key.profession}`));
 
 
